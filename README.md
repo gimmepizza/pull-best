@@ -57,12 +57,14 @@ Intent: "crypto sentiment analysis"
 git clone https://github.com/gimmepizza/pull-best.git
 cd pull-best
 
-# Copy the Claude Code integration files
-cp -r .claude/commands/* ~/.claude/commands/
-cp -r .claude/skills/*   ~/.claude/skills/
+# Copy everything into ~/.claude
+mkdir -p ~/.claude/scripts ~/.claude/commands ~/.claude/skills
+cp  scripts/pull-best.py       ~/.claude/scripts/
+cp  .claude/commands/pull-best.md   ~/.claude/commands/
+cp -r .claude/skills/pull-best      ~/.claude/skills/
 ```
 
-That's it. Restart Claude Code and `/pull-best` is available.
+Restart Claude Code — `/pull-best` is now available from **any folder**.
 
 ---
 
